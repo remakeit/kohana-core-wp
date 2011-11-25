@@ -38,7 +38,7 @@ config/
 :  Configuration files return an associative array of options that can be loaded using [Kohana::$config]. Config files are merged rather than overwritten by the cascade. See [config files](files/config) for more information.
 
 i18n/
-:  Translation files return an associative array of strings. Translation is done using the `__()` method. To translate "Hello, world!" into Spanish, you would call `__('Hello, world!')` with [I18n::$lang] set to "es-es". I18n files are merged rather than overwritten by the cascade. See [I18n files](files/i18n) for more information.
+:  Translation files return an associative array of strings. Translation is done using the `___()` method. To translate "Hello, world!" into Spanish, you would call `___('Hello, world!')` with [I18n::$lang] set to "es-es". I18n files are merged rather than overwritten by the cascade. See [I18n files](files/i18n) for more information.
 
 messages/
 :  Message files return an associative array of strings that can be loaded using [Kohana::message]. Messages and i18n files differ in that messages are not translated, but always written in the default language and referred to by a single key. Message files are merged rather than overwritten by the cascade. See [message files](files/messages) for more information.

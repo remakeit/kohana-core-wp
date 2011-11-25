@@ -3,14 +3,14 @@
  * Internationalization (i18n) class. Provides language loading and translation
  * methods without dependencies on [gettext](http://php.net/gettext).
  *
- * Typically this class would never be used directly, but used via the __()
+ * Typically this class would never be used directly, but used via the ___()
  * function, which loads the message and replaces parameters:
  *
  *     // Display a translated message
- *     echo __('Hello, world');
+ *     echo ___('Hello, world');
  *
  *     // With parameter replacement
- *     echo __('Hello, :user', array(':user' => $username));
+ *     echo ___('Hello, :user', array(':user' => $username));
  *
  * @package    Kohana
  * @category   Base
@@ -136,13 +136,13 @@ class Kohana_I18n {
 
 } // End I18n
 
-if ( ! function_exists('__'))
+if ( ! function_exists('___'))
 {
 	/**
 	 * Kohana translation/internationalization function. The PHP function
 	 * [strtr](http://php.net/strtr) is used for replacing parameters.
 	 *
-	 *    __('Welcome back, :user', array(':user' => $username));
+	 *    ___('Welcome back, :user', array(':user' => $username));
 	 *
 	 * [!!] The target language is defined by [I18n::$lang].
 	 * 
@@ -152,7 +152,7 @@ if ( ! function_exists('__'))
 	 * @param   string  source language
 	 * @return  string
 	 */
-	function __($string, array $values = NULL, $lang = 'en-us')
+	function ___($string, array $values = NULL, $lang = 'en-us')
 	{
 		if ($lang !== I18n::$lang)
 		{
